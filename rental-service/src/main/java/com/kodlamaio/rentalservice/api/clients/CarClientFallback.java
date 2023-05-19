@@ -17,7 +17,6 @@ public class CarClientFallback implements CarClient {
 
     @Override
     @Retry(name = "check-is-car-available")
-    //@Retryable(maxAttempts = 3, backoff = @Backoff(delay = 2000))
     public ClientResponse checkIfCarAvailable(UUID carId) {
 
         log.info("INVENTORY SERVICE IS DOWN!");
