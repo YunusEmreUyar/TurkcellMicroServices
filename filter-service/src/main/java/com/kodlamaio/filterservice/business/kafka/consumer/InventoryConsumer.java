@@ -3,6 +3,7 @@ package com.kodlamaio.filterservice.business.kafka.consumer;
 import com.kodlamaio.commonpackage.events.inventory.BrandDeletedEvent;
 import com.kodlamaio.commonpackage.events.inventory.CarCreatedEvent;
 import com.kodlamaio.commonpackage.events.inventory.CarDeletedEvent;
+import com.kodlamaio.commonpackage.events.inventory.CarStateChangedEvent;
 import com.kodlamaio.commonpackage.utils.mappers.ModelMapperService;
 import com.kodlamaio.filterservice.business.abstracts.FilterService;
 import com.kodlamaio.filterservice.entities.Filter;
@@ -44,5 +45,15 @@ public class InventoryConsumer {
     public void consume(BrandDeletedEvent event) {
         service.deleteAllByBrandId(event.getBrandId());
         log.info("Brand deleted event consumed {}", event);
+    }
+
+    @KafkaListener(
+            topics = "car-state-changed",
+            groupId = "car-state-change"
+    )
+    public void consume(CarStateChangedEvent event) {
+        var filter = mapper.forRequest().map(event, Filter.class);
+        service.updateCarStateByCarId(event.getCarId(), event.getState());
+        log.info("Car state updated event consumed {}", event);
     }
 }
