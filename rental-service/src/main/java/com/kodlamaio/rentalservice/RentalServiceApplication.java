@@ -9,7 +9,6 @@ import org.springframework.retry.annotation.EnableRetry;
 
 @EnableFeignClients
 @EnableDiscoveryClient
-@EnableRetry
 @SpringBootApplication(scanBasePackages = {Paths.ConfigurationBasePackage, Paths.Rental.ServiceBasePackage})
 public class RentalServiceApplication {
 

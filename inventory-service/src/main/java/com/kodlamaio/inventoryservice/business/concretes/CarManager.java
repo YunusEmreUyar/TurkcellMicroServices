@@ -15,7 +15,7 @@ import com.kodlamaio.inventoryservice.business.dto.responses.get.GetCarResponse;
 import com.kodlamaio.inventoryservice.business.dto.responses.update.UpdateCarResponse;
 import com.kodlamaio.inventoryservice.business.rules.CarBusinessRules;
 import com.kodlamaio.inventoryservice.entities.Car;
-import com.kodlamaio.inventoryservice.entities.enums.State;
+import com.kodlamaio.commonpackage.utils.enums.State;
 import com.kodlamaio.inventoryservice.repository.CarRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

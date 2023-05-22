@@ -20,6 +20,8 @@ spring:
     openfeign:
       circuitbreaker:
         enabled: true
+
+
 eureka:
   client:
     fetch-registry: true
@@ -31,11 +33,4 @@ eureka:
     prefer-ip-address: true
 server:
   port: 0
-
-resilience4j:
-  retry:
-    instances:
-      check-is-car-available: # name value provided in @Retry.
-        max-attempts: 7
-        wait-duration: 30s
 

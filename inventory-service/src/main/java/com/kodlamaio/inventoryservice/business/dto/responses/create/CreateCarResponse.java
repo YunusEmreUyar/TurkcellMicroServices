@@ -1,6 +1,6 @@
 package com.kodlamaio.inventoryservice.business.dto.responses.create;
 
-import com.kodlamaio.inventoryservice.entities.enums.State;
+import com.kodlamaio.commonpackage.utils.enums.State;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -7,7 +7,7 @@ import com.kodlamaio.inventoryservice.business.dto.responses.create.CreateCarRes
 import com.kodlamaio.inventoryservice.business.dto.responses.get.GetAllCarsResponse;
 import com.kodlamaio.inventoryservice.business.dto.responses.get.GetCarResponse;
 import com.kodlamaio.inventoryservice.business.dto.responses.update.UpdateCarResponse;
-import com.kodlamaio.inventoryservice.entities.enums.State;
+import com.kodlamaio.commonpackage.utils.enums.State;
 
 import java.util.List;
 import java.util.UUID;

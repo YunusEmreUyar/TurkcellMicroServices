@@ -1,4 +1,4 @@
-package com.kodlamaio.inventoryservice.entities.enums;
+package com.kodlamaio.commonpackage.utils.enums;
 
 public enum State {
     Available,
