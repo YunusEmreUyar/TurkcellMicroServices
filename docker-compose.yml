@@ -1,15 +1,12 @@
 version: '3.8'
 
 services:
-  kafka:
-    container_name: kafka-t2
+    kafka:
     image: bashj79/kafka-kraft
     ports:
       - "9092:9092"
     volumes:
       - kafka_data:/opt/kafka/kafka-logs
-    environment:
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.1.10:9092
 
   keycloak:
     image: quay.io/keycloak/keycloak:latest
